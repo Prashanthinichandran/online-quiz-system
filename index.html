@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Start Screen -->
+    <div class="container" id="startScreen">
+
+    <h1>Online Quiz System</h1>
+
+    <p>Enter your details to begin the quiz</p>
+
+    <input
+        type="text"
+        id="studentName"
+        placeholder="Enter your name"
+    >
+
+    <select id="department">
+        <option value="">Select Department</option>
+        <option value="BCA">BCA</option>
+        <option value="B.Sc Computer Science">
+            B.Sc Computer Science
+        </option>
+        <option value="B.Com">B.Com</option>
+        <option value="BBA">BBA</option>
+    </select>
+
+    <select id="year">
+        <option value="">Select Year</option>
+        <option value="1st Year">1st Year</option>
+        <option value="2nd Year">2nd Year</option>
+        <option value="3rd Year">3rd Year</option>
+    </select>
+
+    <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div class="container quiz-container" id="quizScreen">
+        <div class="quiz-header">
+    <span id="questionNumber">Question 1 of 5</span>
+    <span id="timer">Time: 30s</span>
+    </div>
+     <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+        <h2 id="question"></h2>
+
+        <div id="options"></div>
+
+        <button id="nextButton" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Result Screen -->
+    <div class="container result-container" id="resultScreen">
+        <h1>Quiz Completed! 🎉</h1>
+
+        <p>Well done, <strong id="resultName"></strong>!</p>
+
+        <h2>Your Score</h2>
+
+        <div class="score" id="score">0 / 5</div>
+         <div class="percentage" id="percentage">0%</div>
+
+    <div class="result-status" id="resultStatus"></div>
+     <p id="performanceMessage"></p>
+     <div id="answerSummary"></div>
+     id="answerSummary"></div>
+
+<div class="result-buttons">
+    <button onclick="printResult()">Print Result</button>
+    <button onclick="location.reload()">Restart Quiz</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
